@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = ["msassak@gmail.com", "jari.bakken@gmail.com"]
   s.description = "JSON Schema v3 Validator"
   s.summary     = "jschematic #{s.version}"
-  s.homepage    = "https://github.com/msassak/jschematic"
+  s.homepage    = "https://github.com/jarib/jschematic"
 
   s.add_dependency 'addressable'
 
