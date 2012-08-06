@@ -24,6 +24,7 @@ Feature: Core schema: required
       }
       """
     Then '{}' is valid JSON
+    Then '{ "color": "red" }' is valid JSON
 
   Scenario: true
     When the schema is:

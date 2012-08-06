@@ -21,6 +21,8 @@ module Jschematic
       def accepts?(instance)
         if @required
           instance || fail_validation!(@required, instance)
+        else
+          true
         end
       end
     end
