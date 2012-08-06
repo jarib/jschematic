@@ -67,5 +67,22 @@ Feature: Core schema: default
     Then '{ "somethingElse": "foo" }' is not valid JSON
     But '{ "pi": 3.1415 }' is valid JSON
 
+  Scenario: does not fall back for boolean false
+    When the schema is:
+      """
+      {
+          "properties": {
+              "enabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": "is delicious"
+              }
+          }
+      }
+      """
+    Then '{ "enabled": false }' is valid JSON
+    But '{}' is not valid JSON
+
+
   Scenario: default for all types
     TODO: spec

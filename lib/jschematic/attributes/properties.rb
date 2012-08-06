@@ -22,11 +22,11 @@ module Jschematic
             value = nil
           end
 
-          if !value and child.default
+          if value.nil? and child.default
             value = child.default
           end
 
-          if !value and child.required?
+          if value.nil? and child.required?
             fail_validation!("#{child.name} is required", nil)
           elsif !value
             true

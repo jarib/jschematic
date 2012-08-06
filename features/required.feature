@@ -40,3 +40,19 @@ Feature: Core schema: required
     Then '{ "color": "red" }' is valid JSON
     But '{}' is not valid JSON
     And '{ "age": 24 }' is not valid JSON
+
+  Scenario: true for boolean value
+    When the schema is:
+      """
+      {
+          "properties": {
+              "enabled": {
+                  "type": "boolean",
+                  "required": true
+              }
+          }
+      }
+      """
+    Then '{ "enabled": false }' is valid JSON
+    But '{}' is not valid JSON
+    And '{ "age": 24 }' is not valid JSON
