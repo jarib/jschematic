@@ -1,3 +1,6 @@
+#!/usr/bin/env rake
+require "bundler/gem_tasks"
+
 desc "Run Cukes and Specs"
 task :default => ["cukes", "spec"]
 

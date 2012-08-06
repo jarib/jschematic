@@ -1,10 +1,13 @@
+# -*- encoding: utf-8 -*-
+require File.expand_path('../lib/jschematic/version', __FILE__)
+
 Gem::Specification.new do |s|
   s.name        = 'jschematic'
-  s.version     = '0.0.9'
-  s.authors     = ["Mike Sassak"]
+  s.version     = Jschematic::VERSION
+  s.authors     = ["Mike Sassak", "Jari Bakken"]
+  s.email       = ["msassak@gmail.com", "jari.bakken@gmail.com"]
   s.description = "JSON Schema v3 Validator"
   s.summary     = "jschematic #{s.version}"
-  s.email       = "msassak@gmail.com"
   s.homepage    = "https://github.com/msassak/jschematic"
 
   s.add_dependency 'addressable'
@@ -13,7 +16,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'yajl-ruby'
 
-  s.rubygems_version   = "1.3.7"
   s.files            = `git ls-files`.split("\n")
   s.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
   s.extra_rdoc_files = ["LICENSE", "README.md"]
